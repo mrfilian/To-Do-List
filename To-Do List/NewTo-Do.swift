@@ -1,0 +1,35 @@
+//
+//  NewTo-Do.swift
+//  To-Do List
+//
+//  Created by Scholar on 8/8/25.
+//
+
+import SwiftUI
+
+struct NewTo_Do: View {
+    var body: some View {
+        VStack {
+            Text("Task Title")
+                .font(.title)
+                .fontWeight(.bold)
+            TextField("Task Description", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                .padding()
+                .background(Color(.systemGroupedBackground))
+                .cornerRadius(15)
+                .padding()
+            Toggle(isOn: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Is On@*/.constant(true)/*@END_MENU_TOKEN@*/) {
+                Text("Is it important?")
+            }
+            
+        }//end of VStack
+        
+    }
+}
+    
+
+
+
+#Preview {
+    NewTo_Do()
+}
